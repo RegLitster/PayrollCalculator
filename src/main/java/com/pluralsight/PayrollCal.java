@@ -17,15 +17,16 @@ public class PayrollCal {
         float hourlyRate = keyborad.nextFloat();
         float totalHours = hours*hourlyRate;
 
- //       System.out.println("Please enter your overtime hours");
+        System.out.println("Please enter hours of overtime");
         float overtimeHours = keyborad.nextFloat();
 
-//        if (overtimeHours >= 0) {
-//            totalHours = hours * hourlyRate + overtimeHours * 1.5;
-//        }
-//            else {
+        if (overtimeHours >= 0) {
+            double overtimeTotal = hours * hourlyRate + (overtimeHours * 1.5 * hourlyRate);
+            System.out.printf("Thank you %s. You're gross pay is %.2f:", name, overtimeTotal);
+        }
+            else {
                 System.out.printf("Thank you %s. You're gross pay is %.2f:", name, totalHours);
-//            }
+        }
 
 
 
